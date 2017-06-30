@@ -53,7 +53,6 @@
 			this.iporhostBox.Name = "iporhostBox";
 			this.iporhostBox.Size = new System.Drawing.Size(177, 20);
 			this.iporhostBox.TabIndex = 1;
-			this.iporhostBox.Text = "164.132.101.13";
 			// 
 			// label2
 			// 
