@@ -68,7 +68,7 @@ namespace LinuxMTAInstaller.Files {
 			}
 		}
 
-		public static void WriteResourceToFile ( string resourceName, string fileName, string replace1 = "", string replace2 = "", string replace3 = "" ) {
+		public static void WriteResourceToFile ( string resourceName, string fileName, string replace1 = "", string replace2 = "", string replace3 = "", string replace4 = "" ) {
 			using ( Stream resource = Assembly.GetExecutingAssembly ().GetManifestResourceStream ( resourceName ) ) {
 				using ( FileStream file = new FileStream ( fileName, FileMode.Create, FileAccess.Write ) ) {
 					if ( replace1 == "" )
@@ -78,10 +78,14 @@ namespace LinuxMTAInstaller.Files {
 							using ( StreamWriter filewriter = new StreamWriter ( file ) ) {
 								StringBuilder build = new StringBuilder ( reader.ReadToEnd () );
 								build.Replace ( "REPLACEIT1", replace1 );
-								if ( replace2 != "" )
+								if ( replace2 != "" ) {
 									build.Replace ( "REPLACEIT2", replace2 );
-								if ( replace3 != "" )
-									build.Replace ( "REPLACEIT3", replace3 );
+									if ( replace3 != "" ) {
+										build.Replace ( "REPLACEIT3", replace3 );
+										if ( replace4 != "" )
+											build.Replace ( "REPLACEIT4", replace4 );
+									}
+								}
 								filewriter.Write ( build );
 
 							}

@@ -18,6 +18,7 @@ namespace LinuxMTAInstaller.Connection {
 		private static bool bit64;
 		private static int mtaserverport = 22003;
 		private static int mtahttpport = 22005;
+		private static int sshport = 22;
 
 		public static void Login ( string hostorip, int port, string username, string password ) {
 			try {
@@ -32,6 +33,7 @@ namespace LinuxMTAInstaller.Connection {
 				};
 				serverip = hostorip;
 				rootpw = password;
+				sshport = port;
 				using ( Session session = new Session() ) {
 					session.DisableVersionCheck = true;
 					session.Open ( options );
@@ -504,7 +506,7 @@ namespace LinuxMTAInstaller.Connection {
 				using ( Session session = new Session () ) {
 					session.DisableVersionCheck = true;
 					session.Open ( options );
-					Files.Files.WriteResourceToFile ( "LinuxMTAInstaller.Files.firewall.sh", "firewall.sh", mtaserverport.ToString (), mtahttpport.ToString (), ( mtaserverport + 123 ).ToString () );
+					Files.Files.WriteResourceToFile ( "LinuxMTAInstaller.Files.firewall.sh", "firewall.sh", mtaserverport.ToString (), mtahttpport.ToString (), ( mtaserverport + 123 ).ToString (), sshport.ToString() );
 					PutFile ( session, "firewall.sh", "/etc/firewall.sh" );
 					Exec ( session, "chmod u+x /etc/firewall.sh" );
 					SaveInRCLocal ( session, @"\/etc\/firewall.sh" );

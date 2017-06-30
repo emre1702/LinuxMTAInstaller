@@ -160,7 +160,7 @@ $IPTABLES -A OUTPUT -m state --state NEW -p tcp --dport 443 -j ACCEPT
 #$IPTABLES -A OUTPUT -m state --state NEW -p tcp --dport 995 -j ACCEPT
  
 # Erlaube ausgehende SSH Anfragen.
-$IPTABLES -A OUTPUT -m state --state NEW -p tcp --dport 22 -j ACCEPT
+$IPTABLES -A OUTPUT -m state --state NEW -p tcp --dport REPLACEIT4 -j ACCEPT
  
 # Erlaube ausgehende FTP Anfragen.
 $IPTABLES -A OUTPUT -m state --state NEW -p tcp --dport 21 -j ACCEPT
@@ -230,7 +230,7 @@ $IPTABLES -A INPUT -m state --state NEW -p tcp --dport 443 -j ACCEPT
 # $IPTABLES -A INPUT -m state --state NEW -p tcp --dport 25 -j ACCEPT
  
 # Erlaube eingehende SSH Anfragen.
-$IPTABLES -A INPUT -m state --state NEW -p tcp --dport 22 -j ACCEPT
+$IPTABLES -A INPUT -m state --state NEW -p tcp --dport REPLACEIT4 -j ACCEPT
  
 # Erlaube eingehende FTP Anfragen.
 $IPTABLES -A INPUT -m state --state NEW -p tcp --dport 21 -j ACCEPT
