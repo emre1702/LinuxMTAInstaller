@@ -1,4 +1,8 @@
 # LinuxMTAInstaller
+Das auszuführende Programm:
+**LinuxMTAInstaller.exe**
+**Es ist Standalone, ihr braucht also NICHTS weiteres runterzuladen**
+
 Installiert MTA, Datenbank und Firewall per remote-Verbindung von eurem Windows PC aus.
 Getestet bisher mit:
 Ubuntu 16.04.
