@@ -43,6 +43,7 @@
 		{ "configuring_teamspeak", "Konfiguriere Teamspeak3 ..." },
 		{ "loading", "Lade ..." },
 		{ "getting_serveradmin_password_and_token", "Suche nach serveradmin-Passwort und Token ..." },
+		{ "removing_old_MTA_files", "Entferne alte MTA Installation (falls vorhanden) ..." },
 
 		// FORMS //
 		{ "StartWindow_info", @"Willkommen beim Installer für Linux.
