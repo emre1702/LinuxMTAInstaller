@@ -1,23 +1,25 @@
 # LinuxMTAInstaller
-Das auszuführende Programm:  
+The program to run:  
 **LinuxMTAInstaller.exe**  
-**Es ist Standalone, ihr braucht also NICHTS weiteres runterzuladen**  
+**It's standalone! You don't need to install anything else!**  
 
-Installiert MTA, Datenbank und Firewall per remote-Verbindung von eurem Windows PC aus.  
-> Getestet bisher mit:  
+Install MTA, database, Teamspeak and firewall with remote connection on a linux server from your computer.
+> Tested with:  
 > Ubuntu 16.04.  
 
-Empfohlene Einstellungen sind schon ausgewählt.  
-Ihr solltet immer alle Felder ausfüllen, ansonsten kann es zu Problemen beim Programm führen.  
+Recommended settings are already chosen.  
+You should always try to fill everything so you don't get any problems.
 
-Später nach Installation könnt ihr:  
-> MTA mit "/etc/mta.sh start" starten und mit "/etc/mta.sh stop" stoppen.  
-> Firewall in "/etc/firewall.sh" bearbeiten (Ports öffnen, schließen etc.)  
+After the installations you can:
+> Start MTA with "/etc/mta.sh start" - and stop it with "/etc/mta.sh stop" 
+> Start Teamspeak with "/etc/ts.sh start" - and stop it with "/etc/ts.sh stop"
+> Configure your firewall in "/etc/firewall.sh" (open & close ports etc.)  
 
-Was tut das Programm?  
-> Es installiert MTA, Website und Firewall so, dass man möglichst wenig tun muss.  
-> Normalerweise kann so ein Vorgang viel Zeit in Anspruch nehmen, besonders für Anfänger.  
-> Doch dieses Programm macht alles in wenigen Minuten und arbeitet dabei auch gründlich, damit es zu keinen Fehlern kommt.  
+Why use this program?  
+> It installs MTA, Teamspeak, database and the firewall in a easy way.
+> Normally the procedure can take hours, specially for newbies.
+> But with this program you can install these in few minutes without getting problems.  
 
 
-Ich hafte für nichts und empfehle euch das Programm auf eine Neuinstallation anzuwenden.  
+I'm not responsible for anything and recommend you to use this program on a new-installed server.
+Else you could remove your old installations by installing the same again.
