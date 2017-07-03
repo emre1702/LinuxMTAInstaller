@@ -124,8 +124,8 @@ namespace LinuxMTAInstaller.Installs {
 			}
 
 			if ( skinmodding ) {
-				Console.WriteLine ( Languages.GetLang ( "activate_server_skin_modding" ) );
-				Files.Files.ChangeXMLValue ( "mtaserver.xml", "allowing_gta3_img_mods", "peds" );
+				Console.WriteLine ( Languages.GetLang ( "allowing_server_skin_modding" ) );
+				Files.Files.ChangeXMLValue ( "mtaserver.xml", "allow_gta3_img_mods", "peds" );
 			}
 
 			if ( serverpassword != "" ) {
