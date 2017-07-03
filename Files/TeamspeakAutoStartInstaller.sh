@@ -6,8 +6,8 @@
 # Required-Stop:
 # Default-Start: 2 3 4 5
 # Default-Stop: 0 1 6
-# Short-Description: Startet und stoppt TS
-# Description: Startet und stoppt Teamspeak
+# Short-Description: starts and stopps TS
+# Description: starts and stopps Teamspeak
 ### END INIT INFO
 
 USER="REPLACEIT1"

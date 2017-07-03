@@ -6,8 +6,8 @@
 # Required-Stop:
 # Default-Start: 2 3 4 5
 # Default-Stop: 0 1 6
-# Short-Description: Startet MTA
-# Description: Startet MTA
+# Short-Description: starts and stops MTA
+# Description: starts and stops MTA
 ### END INIT INFO
 
 USER="REPLACEIT1"
