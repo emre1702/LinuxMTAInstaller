@@ -137,66 +137,66 @@ $IPTABLES -A FORWARD -m state --state INVALID -j DROP
 # Selectively allow certain outbound connections, block the rest.
 #------------------------------------------------------------------------------
  
-# Erlaube ausgehende DNS Anfragen. Few things will work without this.
+# Allow outgoing DNS requests. Few things will work without this.
 $IPTABLES -A OUTPUT -m state --state NEW -p udp --dport 53 -j ACCEPT
 $IPTABLES -A OUTPUT -m state --state NEW -p tcp --dport 53 -j ACCEPT
  
-# Erlaube ausgehende HTTP Anfragen.
+# Allow outgoing HTTP requests.
 $IPTABLES -A OUTPUT -m state --state NEW -p tcp --dport 80 -j ACCEPT
  
-# Erlaube ausgehende HTTPS Anfragen.
+# Allow outgoing HTTPS requests.
 $IPTABLES -A OUTPUT -m state --state NEW -p tcp --dport 443 -j ACCEPT
  
-# Erlaube ausgehende SMTP Anfragen.
+# Allow outgoing SMTP requests.
 # $IPTABLES -A OUTPUT -m state --state NEW -p tcp --dport 25 -j ACCEPT
  
-# Erlaube ausgehende SMTPS Anfragen.
+# Allow outgoing SMTPS requests.
 # $IPTABLES -A OUTPUT -m state --state NEW -p tcp --dport 465 -j ACCEPT
  
-# Erlaube ausgehende "submission" (RFC 2476) Anfragen.
+# Allow outgoing "submission" (RFC 2476) requests.
 # $IPTABLES -A OUTPUT -m state --state NEW -p tcp --dport 587 -j ACCEPT
  
-# Erlaube ausgehende POP3S Anfragen.
+# Allow outgoing POP3S requests.
 #$IPTABLES -A OUTPUT -m state --state NEW -p tcp --dport 995 -j ACCEPT
  
-# Erlaube ausgehende SSH Anfragen.
+# Allow outgoing SSH requests.
 $IPTABLES -A OUTPUT -m state --state NEW -p tcp --dport REPLACEIT4 -j ACCEPT
  
-# Erlaube ausgehende FTP Anfragen.
+# Allow outgoing FTP requests.
 $IPTABLES -A OUTPUT -m state --state NEW -p tcp --dport 21 -j ACCEPT
  
-# Erlaube ausgehende NTP Anfragen.
+# Allow outgoing NTP requests.
 $IPTABLES -A OUTPUT -m state --state NEW -p udp --dport 123 -j ACCEPT
  
-# Erlaube ausgehende WHOIS Anfragen.
+# Allow outgoing WHOIS requests.
 # $IPTABLES -A OUTPUT -m state --state NEW -p tcp --dport 43 -j ACCEPT
  
-# Erlaube ausgehende CVS Anfragen.
+# Allow outgoing CVS requests.
 #$IPTABLES -A OUTPUT -m state --state NEW -p tcp --dport 2401 -j ACCEPT
  
-# Erlaube ausgehende MySQL Anfragen.
+# Allow outgoing MySQL requests.
 $IPTABLES -A OUTPUT -m state --state NEW -p tcp --dport 3306 -j ACCEPT
  
-# Erlaube ausgehende SVN Anfragen.
+# Allow outgoing SVN requests.
 # $IPTABLES -A OUTPUT -m state --state NEW -p tcp --dport 3690 -j ACCEPT
  
-# Erlaube ausgehende Mumble Anfragen.
+# Allow outgoing Mumble requests.
 #$IPTABLES -A OUTPUT -m state --state NEW -p tcp --dport 64738 -j ACCEPT
 #$IPTABLES -A OUTPUT -m state --state NEW -p udp --dport 64738 -j ACCEPT
 
-# Erlaube ausgehende MTA Anfragen.
+# Allow outgoing MTA requests.
 $IPTABLES -A OUTPUT -m state --state NEW -p udp --dport REPLACEIT1 -j ACCEPT
 $IPTABLES -A OUTPUT -m state --state NEW -p tcp --dport REPLACEIT2 -j ACCEPT
 $IPTABLES -A OUTPUT -m state --state NEW -p udp --dport REPLACEIT3 -j ACCEPT
 
-# Erlaube ausgehende Teamspeak Anfragen.
+# Allow outgoing Teamspeak requests.
 $IPTABLES -A OUTPUT -m state --state NEW -p udp --dport 2010 -j ACCEPT
 $IPTABLES -A OUTPUT -m state --state NEW -p tcp --dport 2008 -j ACCEPT
 
-# Erlaube Sinusbot für Discord.
+# Allow Sinusbot for Discord.
 # $IPTABLES -A OUTPUT -m state --state NEW -p udp --dport 50000:65000 -j ACCEPT
 
-# Erlaube Sinusbot auf andere Teamspeak zu verbinden.
+# Allow Sinusbot to connect to another server.
 # $IPTABLES -A OUTPUT -m state --state NEW -p udp --dport 4330 -j ACCEPT
 # $IPTABLES -A OUTPUT -m state --state NEW -p udp --dport 9987 -j ACCEPT
 # $IPTABLES -A OUTPUT -m state --state NEW -p tcp --dport 30033 -j ACCEPT
@@ -207,54 +207,54 @@ $IPTABLES -A OUTPUT -m state --state NEW -p tcp --dport 2008 -j ACCEPT
 # Selectively allow certain inbound connections, block the rest.
 #------------------------------------------------------------------------------
  
-# Erlaube eingehende DNS Anfragen.
+# Allow incoming DNS requests.
 $IPTABLES -A INPUT -m state --state NEW -p udp --dport 53 -j ACCEPT
 $IPTABLES -A INPUT -m state --state NEW -p tcp --dport 53 -j ACCEPT
  
-# Erlaube eingehende HTTP Anfragen.
+# Allow incoming HTTP requests.
 $IPTABLES -A INPUT -m state --state NEW -p tcp --dport 80 -j ACCEPT
  
-# Erlaube eingehende HTTPS Anfragen.
+# Allow incoming HTTPS requests.
 $IPTABLES -A INPUT -m state --state NEW -p tcp --dport 443 -j ACCEPT
  
-# Erlaube eingehende POP3 Anfragen.
+# Allow incoming POP3 requests.
 # $IPTABLES -A INPUT -m state --state NEW -p tcp --dport 110 -j ACCEPT
  
-# Erlaube eingehende IMAP4 Anfragen.
+# Allow incoming IMAP4 requests.
 # $IPTABLES -A INPUT -m state --state NEW -p tcp --dport 143 -j ACCEPT
  
-# Erlaube eingehende POP3S Anfragen.
+# Allow incoming POP3S requests.
 # $IPTABLES -A INPUT -m state --state NEW -p tcp --dport 995 -j ACCEPT
  
-# Erlaube eingehende SMTP Anfragen.
+# Allow incoming SMTP requests.
 # $IPTABLES -A INPUT -m state --state NEW -p tcp --dport 25 -j ACCEPT
  
-# Erlaube eingehende SSH Anfragen.
+# Allow incoming SSH requests.
 $IPTABLES -A INPUT -m state --state NEW -p tcp --dport REPLACEIT4 -j ACCEPT
  
-# Erlaube eingehende FTP Anfragen.
+# Allow incoming FTP requests.
 $IPTABLES -A INPUT -m state --state NEW -p tcp --dport 21 -j ACCEPT
 ##$IPTABLES -A INPUT -p tcp --destination-port 65000:65534 -j ACCEPT
  
-# Erlaube eingehende Mumble-Anfragen.
+# Allow incoming Mumble-requests.
 #$IPTABLES -A INPUT -m state --state NEW -p tcp --dport 64738 -j ACCEPT
 #$IPTABLES -A INPUT -m state --state NEW -p udp --dport 64738 -j ACCEPT
  
-# Erlaube eingehende MySQL Anfragen.
+# Allow incoming MySQL requests.
 $IPTABLES -A INPUT -m state --state NEW -p tcp --dport 3306 -j ACCEPT
 
-# Erlaube eingehende MTA Anfragen.
+# Allow incoming MTA requests.
 $IPTABLES -A INPUT -m state --state NEW -p udp --dport 22003 -j ACCEPT
 $IPTABLES -A INPUT -m state --state NEW -p tcp --dport 22005 -j ACCEPT
 $IPTABLES -A INPUT -m state --state NEW -p udp --dport 22126 -j ACCEPT
 
-# Erlaube eingehende Teamspeak Anfragen.
+# Allow incoming Teamspeak requests.
 $IPTABLES -A INPUT -m state --state NEW -p udp --dport 9987 -j ACCEPT
 $IPTABLES -A INPUT -m state --state NEW -p tcp --dport 30033 -j ACCEPT
 $IPTABLES -A INPUT -m state --state NEW -p tcp --dport 10011 -j ACCEPT
 $IPTABLES -A INPUT -m state --state NEW -p tcp --dport 41144 -j ACCEPT
 
-# Erlaube eingehende Sinusbot Anfragen.
+# Allow incoming Sinusbot requests.
 # $IPTABLES -A INPUT -m state --state NEW -p tcp --dport 8087 -j ACCEPT
 
  
