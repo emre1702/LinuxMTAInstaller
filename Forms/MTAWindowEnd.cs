@@ -10,10 +10,13 @@ using System.Windows.Forms;
 
 namespace LinuxMTAInstaller.Forms {
 	public partial class MTAWindowEnd : Form {
-		public MTAWindowEnd ( Point Location ) {
+		public MTAWindowEnd ( Point Location, string user ) {
 			InitializeComponent ();
-			this.Show ();
+			this.label1.Text = Strings.Strings.GetReplacedString ( Languages.GetLang ( "mtawindow_end" ), user );
+			this.button1.Text = Languages.GetLang ( "back" );
 			this.Location = Location;
+			this.Show ();
+			
 		}
 
 		private void button1_Click ( object sender, EventArgs e ) {

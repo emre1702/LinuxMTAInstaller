@@ -52,20 +52,21 @@ namespace LinuxMTAInstaller.Forms {
 			// 
 			// label1
 			// 
-			this.label1.Location = new System.Drawing.Point(25, 21);
+			this.label1.Location = new System.Drawing.Point(12, 21);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(142, 21);
+			this.label1.Size = new System.Drawing.Size(155, 21);
 			this.label1.TabIndex = 1;
-			this.label1.Text = "MySQL-Datenbank-System:";
+			this.label1.Text = "MySQL-database-system:";
+			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// label2
 			// 
-			this.label2.AutoSize = true;
 			this.label2.Location = new System.Drawing.Point(4, 242);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(91, 13);
+			this.label2.Size = new System.Drawing.Size(93, 13);
 			this.label2.TabIndex = 2;
-			this.label2.Text = "MySQL-Passwort:";
+			this.label2.Text = "MySQL-password:";
+			this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// password
 			// 
@@ -80,27 +81,27 @@ namespace LinuxMTAInstaller.Forms {
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(87, 28);
 			this.button1.TabIndex = 12;
-			this.button1.Text = "Installieren";
+			this.button1.Text = "Install";
 			this.button1.UseVisualStyleBackColor = true;
 			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// label3
 			// 
-			this.label3.Location = new System.Drawing.Point(56, 46);
+			this.label3.Location = new System.Drawing.Point(12, 46);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(111, 17);
+			this.label3.Size = new System.Drawing.Size(155, 17);
 			this.label3.TabIndex = 9;
-			this.label3.Text = "Websiten-Applikation:";
-			this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.label3.Text = "Website-application:";
+			this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// label4
 			// 
-			this.label4.AutoSize = true;
 			this.label4.Location = new System.Drawing.Point(12, 89);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(249, 13);
+			this.label4.Size = new System.Drawing.Size(326, 13);
 			this.label4.TabIndex = 10;
-			this.label4.Text = "PhpMyAdmin-Link - z.B. 151.31.41.54/phpmyadmin";
+			this.label4.Text = "PhpMyAdmin-URL - e.g. 151.31.41.54/phpmyadmin";
+			this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// url
 			// 
@@ -112,12 +113,12 @@ namespace LinuxMTAInstaller.Forms {
 			// 
 			// label5
 			// 
-			this.label5.Location = new System.Drawing.Point(-6, 151);
+			this.label5.Location = new System.Drawing.Point(7, 151);
 			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(101, 64);
+			this.label5.Size = new System.Drawing.Size(88, 79);
 			this.label5.TabIndex = 12;
-			this.label5.Text = "Verstecke Datenbanken:";
-			this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.label5.Text = "Hide databases:";
+			this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// hidedb
 			// 
@@ -171,20 +172,20 @@ namespace LinuxMTAInstaller.Forms {
 			this.newuserfordb.CheckState = System.Windows.Forms.CheckState.Checked;
 			this.newuserfordb.Location = new System.Drawing.Point(18, 328);
 			this.newuserfordb.Name = "newuserfordb";
-			this.newuserfordb.Size = new System.Drawing.Size(216, 17);
+			this.newuserfordb.Size = new System.Drawing.Size(165, 17);
 			this.newuserfordb.TabIndex = 7;
-			this.newuserfordb.Text = "Neuen Benutzer für Datenbank erstellen";
+			this.newuserfordb.Text = "Create new user for database";
 			this.newuserfordb.UseVisualStyleBackColor = true;
 			this.newuserfordb.CheckedChanged += new System.EventHandler(this.newuserfordb_CheckedChanged);
 			// 
 			// labelmysqlusername
 			// 
-			this.labelmysqlusername.AutoSize = true;
-			this.labelmysqlusername.Location = new System.Drawing.Point(15, 354);
+			this.labelmysqlusername.Location = new System.Drawing.Point(12, 354);
 			this.labelmysqlusername.Name = "labelmysqlusername";
 			this.labelmysqlusername.Size = new System.Drawing.Size(83, 13);
 			this.labelmysqlusername.TabIndex = 17;
-			this.labelmysqlusername.Text = "Benutzer-Name:";
+			this.labelmysqlusername.Text = "username:";
+			this.labelmysqlusername.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// mysqlusername
 			// 
@@ -195,12 +196,12 @@ namespace LinuxMTAInstaller.Forms {
 			// 
 			// labelmysqluserpw
 			// 
-			this.labelmysqluserpw.AutoSize = true;
-			this.labelmysqluserpw.Location = new System.Drawing.Point(45, 383);
+			this.labelmysqluserpw.Location = new System.Drawing.Point(7, 383);
 			this.labelmysqluserpw.Name = "labelmysqluserpw";
-			this.labelmysqluserpw.Size = new System.Drawing.Size(50, 13);
+			this.labelmysqluserpw.Size = new System.Drawing.Size(88, 13);
 			this.labelmysqluserpw.TabIndex = 19;
-			this.labelmysqluserpw.Text = "Passwort";
+			this.labelmysqluserpw.Text = "password:";
+			this.labelmysqluserpw.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// mysqluserpw
 			// 
@@ -211,12 +212,12 @@ namespace LinuxMTAInstaller.Forms {
 			// 
 			// label6
 			// 
-			this.label6.AutoSize = true;
 			this.label6.Location = new System.Drawing.Point(4, 271);
 			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(94, 13);
+			this.label6.Size = new System.Drawing.Size(91, 13);
 			this.label6.TabIndex = 21;
-			this.label6.Text = "Datenbank-Name:";
+			this.label6.Text = "Database-name:";
+			this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// databasename
 			// 
@@ -232,9 +233,9 @@ namespace LinuxMTAInstaller.Forms {
 			this.grantalluser.CheckState = System.Windows.Forms.CheckState.Checked;
 			this.grantalluser.Location = new System.Drawing.Point(59, 406);
 			this.grantalluser.Name = "grantalluser";
-			this.grantalluser.Size = new System.Drawing.Size(87, 17);
+			this.grantalluser.Size = new System.Drawing.Size(99, 17);
 			this.grantalluser.TabIndex = 10;
-			this.grantalluser.Text = "Volle Rechte";
+			this.grantalluser.Text = "Full permissions";
 			this.grantalluser.UseVisualStyleBackColor = true;
 			// 
 			// button2
@@ -243,7 +244,7 @@ namespace LinuxMTAInstaller.Forms {
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(87, 28);
 			this.button2.TabIndex = 13;
-			this.button2.Text = "Zurück";
+			this.button2.Text = "Back";
 			this.button2.UseVisualStyleBackColor = true;
 			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
@@ -252,11 +253,11 @@ namespace LinuxMTAInstaller.Forms {
 			this.useronlylocal.AutoSize = true;
 			this.useronlylocal.Checked = true;
 			this.useronlylocal.CheckState = System.Windows.Forms.CheckState.Checked;
-			this.useronlylocal.Location = new System.Drawing.Point(207, 406);
+			this.useronlylocal.Location = new System.Drawing.Point(217, 406);
 			this.useronlylocal.Name = "useronlylocal";
-			this.useronlylocal.Size = new System.Drawing.Size(108, 17);
+			this.useronlylocal.Size = new System.Drawing.Size(51, 17);
 			this.useronlylocal.TabIndex = 11;
-			this.useronlylocal.Text = "Rechte nur Lokal";
+			this.useronlylocal.Text = "Back";
 			this.useronlylocal.UseVisualStyleBackColor = true;
 			// 
 			// DatabaseWindow
@@ -286,7 +287,7 @@ namespace LinuxMTAInstaller.Forms {
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Name = "DatabaseWindow";
-			this.Text = "DatabaseWindow";
+			this.Text = "Database";
 			this.Load += new System.EventHandler(this.DatabaseWindow_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
@@ -299,7 +300,6 @@ namespace LinuxMTAInstaller.Forms {
 		private System.Windows.Forms.TextBox password;
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.TextBox url;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.CheckedListBox hidedb;
@@ -316,5 +316,6 @@ namespace LinuxMTAInstaller.Forms {
 		private CheckBox grantalluser;
 		private Button button2;
 		private CheckBox useronlylocal;
+		private Label label4;
 	}
 }

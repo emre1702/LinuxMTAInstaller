@@ -118,11 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="label1.Text" xml:space="preserve">
-    <value>Hier kannst du nun die einzelnen Komponente installieren.
-Durch erneute Installation werden die vorherigen Installationen entfernt.
+    <value>Here you can install specific components.
+Installing a already installed component removes the old version.
 
-Firewall erstellt eine ganze Reihe von Firewall-Einstellungen und öffnet dabei die Ports.
-Benutze den Button am Ende, wenn du nicht weißt, wie du die Ports manuell öffnen kannst.</value>
+Firewall creates some firewall-rules and closes not-used ports.
+Use it at the end if you want to use another ports for MTA instead of the default ports.</value>
   </data>
   <metadata name="notifyIcon1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>

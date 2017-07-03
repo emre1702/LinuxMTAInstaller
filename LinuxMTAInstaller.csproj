@@ -74,7 +74,12 @@
   <ItemGroup>
     <Compile Include="Connection\Connection.cs" />
     <Compile Include="EmbeddedAssembly.cs" />
-    <Compile Include="Files\Files.cs" />
+    <Compile Include="Installs\Database.cs" />
+    <Compile Include="Installs\Firewall.cs" />
+    <Compile Include="Installs\Teamspeak.cs" />
+    <Compile Include="Languages\English.cs" />
+    <Compile Include="Languages\German.cs" />
+    <Compile Include="Useful\Files.cs" />
     <Compile Include="Forms\DatabaseWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,9 +128,24 @@
     <Compile Include="Forms\StartWindow.Designer.cs">
       <DependentUpon>StartWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\TeamspeakWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TeamspeakWindow.Designer.cs">
+      <DependentUpon>TeamspeakWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TeamspeakWindowEnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TeamspeakWindowEnd.Designer.cs">
+      <DependentUpon>TeamspeakWindowEnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Installs\MTA.cs" />
+    <Compile Include="Languages\Languages.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\Services.cs" />
+    <Compile Include="Useful\Strings.cs" />
+    <Compile Include="Useful\Useful.cs" />
     <EmbeddedResource Include="Forms\DatabaseWindow.resx">
       <DependentUpon>DatabaseWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,6 +172,12 @@
     <EmbeddedResource Include="Forms\StartWindow.resx">
       <DependentUpon>StartWindow.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TeamspeakWindow.resx">
+      <DependentUpon>TeamspeakWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TeamspeakWindowEnd.resx">
+      <DependentUpon>TeamspeakWindowEnd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -167,6 +193,7 @@
     <EmbeddedResource Include="Files\MTAInstaller.sh" />
     <EmbeddedResource Include="Files\default" />
     <EmbeddedResource Include="Files\firewall.sh" />
+    <EmbeddedResource Include="Files\TeamspeakAutoStartInstaller.sh" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -13,6 +13,7 @@ namespace LinuxMTAInstaller.Forms {
 		public DatabaseWindowEnd ( Point Location ) {
 			InitializeComponent ( );
 			this.Location = Location;
+			this.label1.Text = Languages.GetLang ( "database_installed_form" );
 			this.Show ();
 		}
 

@@ -14,8 +14,13 @@ namespace LinuxMTAInstaller.Forms {
 		public LoginWindow ( Point Location ) {
 			InitializeComponent ();
 			instance = this;
-			instance.Show ();
 			this.Location = Location;
+			this.label1.Text = Languages.GetLang ( "login_with_root" );
+			this.label3.Text = Languages.GetLang ( "ssh_port" );
+			this.label4.Text = Languages.GetLang ( "username" );
+			this.label5.Text = Languages.GetLang ( "password" );
+			this.button1.Text = Languages.GetLang ( "login" );
+			instance.Show ();
 		}
 
 		private void button1_Click ( object sender, EventArgs e ) {

@@ -10,8 +10,12 @@ using System.Windows.Forms;
 
 namespace LinuxMTAInstaller.Forms {
 	public partial class FirewallWindowEnd : Form {
-		public FirewallWindowEnd ( ) {
+		public FirewallWindowEnd ( Point Location ) {
 			InitializeComponent ();
+			this.Location = Location;
+			this.label1.Text = Languages.GetLang ( "firewall_installed_form" );
+			this.button1.Text = Languages.GetLang ( "back" );
+			this.Show ();
 		}
 
 		private void button1_Click ( object sender, EventArgs e ) {

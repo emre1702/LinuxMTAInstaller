@@ -64,7 +64,7 @@
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(118, 13);
 			this.label1.TabIndex = 0;
-			this.label1.Text = "Ausführender Benutzer:";
+			this.label1.Text = Languages.GetLang ( "running_user" );
 			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// usernameBox
@@ -82,7 +82,7 @@
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(95, 13);
 			this.label2.TabIndex = 2;
-			this.label2.Text = "Server Port (UDP):";
+			this.label2.Text = "Server-" + Languages.GetLang ( "port" ) + " (UDP):";
 			this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// serverPort
@@ -127,7 +127,7 @@
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(91, 13);
 			this.label3.TabIndex = 5;
-			this.label3.Text = "HTTP Port (TCP):";
+			this.label3.Text = "HTTP-" + Languages.GetLang ( "port" ) + " (TCP):";
 			this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// label4
@@ -137,7 +137,7 @@
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(85, 13);
 			this.label4.TabIndex = 6;
-			this.label4.Text = "ASE Port (UDP):";
+			this.label4.Text = "ASE-"+Languages.GetLang("port")+" (UDP):";
 			this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// asePort
@@ -157,7 +157,7 @@
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(72, 13);
 			this.label5.TabIndex = 8;
-			this.label5.Text = "Server-Name:";
+			this.label5.Text = Languages.GetLang ( "server_name" );
 			this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// servername
@@ -175,7 +175,7 @@
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(68, 13);
 			this.label6.TabIndex = 10;
-			this.label6.Text = "Max. Spieler:";
+			this.label6.Text = Languages.GetLang ( "max_players" );
 			this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// maxplayers
@@ -209,7 +209,7 @@
 			this.label7.Name = "label7";
 			this.label7.Size = new System.Drawing.Size(87, 13);
 			this.label7.TabIndex = 13;
-			this.label7.Text = "Server-Passwort:";
+			this.label7.Text = Languages.GetLang ( "server_password" );
 			this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// label8
@@ -219,7 +219,7 @@
 			this.label8.Name = "label8";
 			this.label8.Size = new System.Drawing.Size(54, 13);
 			this.label8.TabIndex = 14;
-			this.label8.Text = "FPS-Limit:";
+			this.label8.Text = Languages.GetLang ( "fps_limit" );
 			this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// fpslimit
@@ -252,7 +252,7 @@
 			this.skinmodding.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.skinmodding.Size = new System.Drawing.Size(94, 17);
 			this.skinmodding.TabIndex = 16;
-			this.skinmodding.Text = "Skin-Modding:";
+			this.skinmodding.Text = Languages.GetLang ( "skin_modding" );
 			this.skinmodding.UseVisualStyleBackColor = true;
 			// 
 			// bulletsync
@@ -265,7 +265,7 @@
 			this.bulletsync.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.bulletsync.Size = new System.Drawing.Size(82, 17);
 			this.bulletsync.TabIndex = 17;
-			this.bulletsync.Text = "Bullet-Sync:";
+			this.bulletsync.Text = Languages.GetLang ( "bullet_sync" );
 			this.bulletsync.UseVisualStyleBackColor = true;
 			// 
 			// button1
@@ -274,7 +274,7 @@
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(109, 23);
 			this.button1.TabIndex = 18;
-			this.button1.Text = "Starten";
+			this.button1.Text = Languages.GetLang ( "install" );
 			this.button1.UseVisualStyleBackColor = true;
 			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
@@ -297,7 +297,7 @@
 			this.label9.Name = "label9";
 			this.label9.Size = new System.Drawing.Size(98, 13);
 			this.label9.TabIndex = 20;
-			this.label9.Text = "Benutzer-Passwort:";
+			this.label9.Text = Languages.GetLang ( "user_password" );
 			this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// autostart
@@ -310,7 +310,7 @@
 			this.autostart.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.autostart.Size = new System.Drawing.Size(76, 17);
 			this.autostart.TabIndex = 21;
-			this.autostart.Text = "Auto-Start:";
+			this.autostart.Text = Languages.GetLang ( "auto_start" );
 			this.autostart.UseVisualStyleBackColor = true;
 			// 
 			// label10
@@ -319,8 +319,7 @@
 			this.label10.Name = "label10";
 			this.label10.Size = new System.Drawing.Size(361, 43);
 			this.label10.TabIndex = 22;
-			this.label10.Text = "ACHTUNG: \r\nFalls der Installer vorher schon mal benutzt wurde, \r\nwird der alte Or" +
-    "dner entfernt!";
+			this.label10.Text = Languages.GetLang ( "install_will_delete_old" );
 			this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// email
@@ -337,7 +336,7 @@
 			this.label11.Name = "label11";
 			this.label11.Size = new System.Drawing.Size(80, 13);
 			this.label11.TabIndex = 24;
-			this.label11.Text = "E-Mail-Adresse:";
+			this.label11.Text = Languages.GetLang ( "email_address" );
 			this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// button2
@@ -346,7 +345,7 @@
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(109, 23);
 			this.button2.TabIndex = 25;
-			this.button2.Text = "Zurück";
+			this.button2.Text = Languages.GetLang ( "back" );
 			this.button2.UseVisualStyleBackColor = true;
 			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
@@ -382,7 +381,7 @@
 			this.Controls.Add(this.usernameBox);
 			this.Controls.Add(this.label1);
 			this.Name = "MTAWindow";
-			this.Text = "MTA Installier";
+			this.Text = "MTA Installer";
 			((System.ComponentModel.ISupportInitialize)(this.serverPort)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.httpPort)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.maxplayers)).EndInit();

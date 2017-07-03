@@ -34,7 +34,7 @@
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(289, 120);
 			this.label1.TabIndex = 0;
-			this.label1.Text = resources.GetString("label1.Text");
+			this.label1.Text = Languages.GetLang ( "database_installed_form" );
 			// 
 			// mainmenu
 			// 
@@ -42,7 +42,7 @@
 			this.mainmenu.Name = "mainmenu";
 			this.mainmenu.Size = new System.Drawing.Size(82, 28);
 			this.mainmenu.TabIndex = 1;
-			this.mainmenu.Text = "Zurück";
+			this.mainmenu.Text = "Back";
 			this.mainmenu.UseVisualStyleBackColor = true;
 			this.mainmenu.Click += new System.EventHandler(this.mainmenu_Click);
 			// 
@@ -54,7 +54,7 @@
 			this.Controls.Add(this.mainmenu);
 			this.Controls.Add(this.label1);
 			this.Name = "DatabaseWindowEnd";
-			this.Text = "Datenbank wurde installiert";
+			this.Text = "Datenbank end";
 			this.ResumeLayout(false);
 
 		}

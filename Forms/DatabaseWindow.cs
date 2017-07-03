@@ -14,8 +14,22 @@ namespace LinuxMTAInstaller.Forms {
 		public DatabaseWindow ( Point Location ) {
 			InitializeComponent ();
 			instance = this;
-			this.Show ();
 			this.Location = Location;
+			this.label1.Text = Languages.GetLang ( "mysql_database_system" );
+			this.label2.Text = Languages.GetLang ( "mysql_password" );
+			this.label3.Text = Languages.GetLang ( "website_application" );
+			this.label4.Text = Languages.GetLang ( "phpmyadmin_url" );
+			this.label5.Text = Languages.GetLang ( "hide_dbs" );
+			this.button1.Text = Languages.GetLang ( "install" );
+			this.newuserfordb.Text = Languages.GetLang ( "create_new_user_for_db" );
+			this.labelmysqlusername.Text = Languages.GetLang ( "username" );
+			this.labelmysqluserpw.Text = Languages.GetLang ( "password" );
+			this.label6.Text = Languages.GetLang ( "database_name" );
+			this.grantalluser.Text = Languages.GetLang ( "full_permissions" );
+			this.button2.Text = Languages.GetLang ( "back" );
+			this.useronlylocal.Text = Languages.GetLang ( "permissions_only_local" );
+			this.Show ();
+			
 		}
 
 		public static void notification ( string text, string type ) {
@@ -30,7 +44,7 @@ namespace LinuxMTAInstaller.Forms {
 		}
 
 		private void button1_Click ( object sender, EventArgs e ) {
-			Connection.Connection.InstallDatabase ( this.databasesystem.Text, this.webapp.Text, this.url.Text, this.hidedb.GetItemChecked ( 0 ), this.hidedb.GetItemChecked ( 1 ), this.hidedb.GetItemChecked ( 2 ), this.hidedb.GetItemChecked ( 3 ), this.hidedb.GetItemChecked ( 4 ), this.password.Text, this.newuserfordb.Checked, this.mysqlusername.Text, this.mysqluserpw.Text, this.databasename.Text, this.grantalluser.Checked, this.useronlylocal.Checked );
+			Installs.Database.InstallDatabase ( this.databasesystem.Text, this.webapp.Text, this.url.Text, this.hidedb.GetItemChecked ( 0 ), this.hidedb.GetItemChecked ( 1 ), this.hidedb.GetItemChecked ( 2 ), this.hidedb.GetItemChecked ( 3 ), this.hidedb.GetItemChecked ( 4 ), this.password.Text, this.newuserfordb.Checked, this.mysqlusername.Text, this.mysqluserpw.Text, this.databasename.Text, this.grantalluser.Checked, this.useronlylocal.Checked );
 		}
 
 		private void newuserfordb_CheckedChanged ( object sender, EventArgs e ) {

@@ -189,14 +189,14 @@ $IPTABLES -A OUTPUT -m state --state NEW -p udp --dport REPLACEIT1 -j ACCEPT
 $IPTABLES -A OUTPUT -m state --state NEW -p tcp --dport REPLACEIT2 -j ACCEPT
 $IPTABLES -A OUTPUT -m state --state NEW -p udp --dport REPLACEIT3 -j ACCEPT
 
-# Erlaube ausgehende TS Anfragen.
-# $IPTABLES -A OUTPUT -m state --state NEW -p udp --dport 2010 -j ACCEPT
-# $IPTABLES -A OUTPUT -m state --state NEW -p tcp --dport 2008 -j ACCEPT
+# Erlaube ausgehende Teamspeak Anfragen.
+$IPTABLES -A OUTPUT -m state --state NEW -p udp --dport 2010 -j ACCEPT
+$IPTABLES -A OUTPUT -m state --state NEW -p tcp --dport 2008 -j ACCEPT
 
 # Erlaube Sinusbot für Discord.
 # $IPTABLES -A OUTPUT -m state --state NEW -p udp --dport 50000:65000 -j ACCEPT
 
-# Erlaube Sinusbot auf andere TS zu verbinden.
+# Erlaube Sinusbot auf andere Teamspeak zu verbinden.
 # $IPTABLES -A OUTPUT -m state --state NEW -p udp --dport 4330 -j ACCEPT
 # $IPTABLES -A OUTPUT -m state --state NEW -p udp --dport 9987 -j ACCEPT
 # $IPTABLES -A OUTPUT -m state --state NEW -p tcp --dport 30033 -j ACCEPT
@@ -248,11 +248,11 @@ $IPTABLES -A INPUT -m state --state NEW -p udp --dport 22003 -j ACCEPT
 $IPTABLES -A INPUT -m state --state NEW -p tcp --dport 22005 -j ACCEPT
 $IPTABLES -A INPUT -m state --state NEW -p udp --dport 22126 -j ACCEPT
 
-# Erlaube eingehende TS Anfragen.
-# $IPTABLES -A INPUT -m state --state NEW -p udp --dport 9987 -j ACCEPT
-# $IPTABLES -A INPUT -m state --state NEW -p tcp --dport 30033 -j ACCEPT
-# $IPTABLES -A INPUT -m state --state NEW -p tcp --dport 10011 -j ACCEPT
-# $IPTABLES -A INPUT -m state --state NEW -p tcp --dport 41144 -j ACCEPT
+# Erlaube eingehende Teamspeak Anfragen.
+$IPTABLES -A INPUT -m state --state NEW -p udp --dport 9987 -j ACCEPT
+$IPTABLES -A INPUT -m state --state NEW -p tcp --dport 30033 -j ACCEPT
+$IPTABLES -A INPUT -m state --state NEW -p tcp --dport 10011 -j ACCEPT
+$IPTABLES -A INPUT -m state --state NEW -p tcp --dport 41144 -j ACCEPT
 
 # Erlaube eingehende Sinusbot Anfragen.
 # $IPTABLES -A INPUT -m state --state NEW -p tcp --dport 8087 -j ACCEPT

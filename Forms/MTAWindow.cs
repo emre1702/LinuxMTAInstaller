@@ -14,13 +14,30 @@ namespace LinuxMTAInstaller.Forms {
 		public MTAWindow ( Point Location ) {
 			InitializeComponent ();
 			instance = this;
+			this.label1.Text = Languages.GetLang ( "running_user" );
+			this.label2.Text = "Server-" + Languages.GetLang ( "port" ) + " (UDP):";
+			this.label3.Text = "HTTP-" + Languages.GetLang ( "port" ) + " (TCP):";
+			this.label4.Text = "ASE-" + Languages.GetLang ( "port" ) + " (UDP):";
+			this.label5.Text = Languages.GetLang ( "server_name" );
+			this.label6.Text = Languages.GetLang ( "max_players" );
+			this.label7.Text = Languages.GetLang ( "server_password" );
+			this.label8.Text = Languages.GetLang ( "fps_limit" );
+			this.skinmodding.Text = Languages.GetLang ( "skin_modding" );
+			this.bulletsync.Text = Languages.GetLang ( "bullet_sync" );
+			this.button1.Text = Languages.GetLang ( "install" );
+			this.label9.Text = Languages.GetLang ( "user_password" );
+			this.autostart.Text = Languages.GetLang ( "auto_start" );
+			this.label10.Text = Languages.GetLang ( "install_will_delete_old" );
+			this.label11.Text = Languages.GetLang ( "email_address" );
+			this.button2.Text = Languages.GetLang ( "back" );
+
 			instance.Show ();
 			this.Location = Location;
 		}
 
 		private void button1_Click ( object sender, EventArgs e ) {
 			if ( instance.usernameBox.Text.Length > 0 ) {
-				Connection.Connection.InstallMTA ( this.usernameBox.Text, this.userPasswordBox.Text, this.autostart.Checked, this.servername.Text, this.email.Text, this.serverPort.Value.ToString(), this.maxplayers.Value.ToString (), this.httpPort.Value.ToString(), this.skinmodding.Checked, this.serverpassword.Text, this.bulletsync.Checked, this.fpslimit.Value.ToString() );
+				Installs.MTA.InstallMTA ( this.usernameBox.Text, this.userPasswordBox.Text, this.autostart.Checked, this.servername.Text, this.email.Text, this.serverPort.Value.ToString(), this.maxplayers.Value.ToString (), this.httpPort.Value.ToString(), this.skinmodding.Checked, this.serverpassword.Text, this.bulletsync.Checked, this.fpslimit.Value.ToString() );
 			}
 		}
 

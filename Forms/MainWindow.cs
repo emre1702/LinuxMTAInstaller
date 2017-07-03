@@ -14,8 +14,10 @@ namespace LinuxMTAInstaller.Forms {
 		public MainWindow ( Point Location ) {
 			InitializeComponent ();
 			instance = this;
-			instance.Show ();
+			this.label1.Text = Languages.GetLang ( "mainwindow_info" );
+			this.installDatabase.Text = Languages.GetLang ( "database" );
 			this.Location = Location;
+			instance.Show ();
 		}
 
 		private void installMTA_Click ( object sender, EventArgs e ) {
@@ -30,8 +32,14 @@ namespace LinuxMTAInstaller.Forms {
 
 		private void installFirewall_Click ( object sender, EventArgs e ) {
 			this.Hide ();
-			Connection.Connection.InstallFirewall ();
+			Installs.Firewall.InstallFirewall ();
 		}
+
+		private void button1_Click ( object sender, EventArgs e ) {
+			this.Hide ();
+			new Forms.TeamspeakWindow ( this.Location );
+		}
+
 
 		public static void notification ( string text, string type ) {
 			if ( type == "error" ) {

@@ -34,7 +34,7 @@
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(333, 213);
 			this.label1.TabIndex = 0;
-			this.label1.Text = resources.GetString("label1.Text");
+			this.label1.Text = Languages.GetLang ( "mtawindow_end" );
 			// 
 			// button1
 			// 
@@ -42,7 +42,7 @@
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(125, 25);
 			this.button1.TabIndex = 1;
-			this.button1.Text = "Weiter";
+			this.button1.Text = Languages.GetLang ( "back" );
 			this.button1.UseVisualStyleBackColor = true;
 			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
@@ -54,7 +54,7 @@
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.label1);
 			this.Name = "MTAWindowEnd";
-			this.Text = "MTA wurde installiert";
+			this.Text = "MTA installed";
 			this.ResumeLayout(false);
 
 		}
