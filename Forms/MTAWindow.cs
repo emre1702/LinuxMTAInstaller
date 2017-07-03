@@ -61,5 +61,9 @@ namespace LinuxMTAInstaller.Forms {
 			this.Close ();
 			Forms.MainWindow.instance.Show();
 		}
+
+		private void label1_Click ( object sender, EventArgs e ) {
+
+		}
 	}
 }
