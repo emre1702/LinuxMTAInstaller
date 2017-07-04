@@ -45,9 +45,9 @@
 			// 
 			// installFirewall
 			// 
-			this.installFirewall.Location = new System.Drawing.Point(102, 193);
+			this.installFirewall.Location = new System.Drawing.Point(187, 157);
 			this.installFirewall.Name = "installFirewall";
-			this.installFirewall.Size = new System.Drawing.Size(169, 30);
+			this.installFirewall.Size = new System.Drawing.Size(162, 30);
 			this.installFirewall.TabIndex = 3;
 			this.installFirewall.Text = "Firewall";
 			this.installFirewall.UseVisualStyleBackColor = true;
@@ -60,7 +60,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.label1.Location = new System.Drawing.Point(2, -1);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(356, 114);
+			this.label1.Size = new System.Drawing.Size(356, 119);
 			this.label1.TabIndex = 5;
 			this.label1.Text = resources.GetString("label1.Text");
 			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -94,7 +94,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(361, 239);
+			this.ClientSize = new System.Drawing.Size(361, 203);
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.installDatabase);
 			this.Controls.Add(this.label1);
