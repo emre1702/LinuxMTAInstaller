@@ -70,6 +70,12 @@ namespace LinuxMTAInstaller.Installs {
 			}
 		}
 
+		/** 
+		 * static method to remove all previous installations
+		 * That way you can install database as many times as you want without getting any problems.
+		 * 
+		 * @param Session session The opened session
+		 * */
 		private static void RemovePreviousInstallation ( Session session ) {
 			try {
 				Useful.Useful.Titel ( Languages.GetLang ( "remove_previous_installations" ) );
