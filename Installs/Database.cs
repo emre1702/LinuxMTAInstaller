@@ -71,14 +71,30 @@ namespace LinuxMTAInstaller.Installs {
 		}
 
 		private static void RemovePreviousInstallation ( Session session ) {
-			Useful.Useful.Titel ( Languages.GetLang ( "remove_previous_installations" ) );
-			// Sometimes getting a dpkg error, so fix it //
-			Connection.Connection.Exec ( session, "dpkg --configure -a" );
-			// Sometimes getting errors, so fix it //
-			Connection.Connection.Exec ( session, "apt-get -qq autoremove" );
-			Connection.Connection.Exec ( session, "apt-get purge -qq apache2* mysql-* libapache2* phpmyadmin mariadb-* nginx*" );
-			Connection.Connection.Exec ( session, "rm -rf /etc/apache2; rm -rf /etc/phpmyadmin; rm -rf /var/lib/mysql; rm -rf /var/lib/nginx; rm -rf /etc/mysql; rm -rf /etc/phpmyadmin; rm -rf /etc/nginx" );
-			Connection.Connection.Exec ( session, "apt-get -qq autoremove" );
+			try {
+				Useful.Useful.Titel ( Languages.GetLang ( "remove_previous_installations" ) );
+				// Sometimes getting a dpkg error, so fix it //
+				Connection.Connection.Exec ( session, "dpkg --configure -a" );
+				// Sometimes getting errors, so fix it //
+				Connection.Connection.Exec ( session, "apt-get -qq autoremove" );
+				Connection.Connection.Exec ( session, "apt-get purge -qq apache2*" );
+				Connection.Connection.Exec ( session, "apt-get purge -qq mysql-*" );
+				Connection.Connection.Exec ( session, "apt-get purge -qq libapache2*" );
+				Connection.Connection.Exec ( session, "apt-get purge -qq phpmyadmin" );
+				Connection.Connection.Exec ( session, "apt-get purge -qq mariadb-*" );
+				Connection.Connection.Exec ( session, "apt-get purge -qq nginx*" );
+				Connection.Connection.Exec ( session, "rm -rf /etc/apache2" );
+				Connection.Connection.Exec ( session, "rm -rf /etc/phpmyadmin" );
+				Connection.Connection.Exec ( session, "rm -rf /var/lib/mysql" );
+				Connection.Connection.Exec ( session, "rm -rf /var/lib/nginx" );
+				Connection.Connection.Exec ( session, "rm -rf /etc/mysql" );
+				Connection.Connection.Exec ( session, "rm -rf /etc/phpmyadmin" );
+				Connection.Connection.Exec ( session, "rm -rf /etc/nginx" );
+				Connection.Connection.Exec ( session, "apt-get -qq autoremove" );
+				Connection.Connection.Exec ( session, "apt-get -qq autoclean" );
+			} catch ( Exception e ) {
+				Console.WriteLine ( e.ToString() );
+			}
 		}
 
 		/** 
