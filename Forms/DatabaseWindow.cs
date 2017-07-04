@@ -44,7 +44,20 @@ namespace LinuxMTAInstaller.Forms {
 		}
 
 		private void button1_Click ( object sender, EventArgs e ) {
-			Installs.Database.InstallDatabase ( this.databasesystem.Text, this.webapp.Text, this.url.Text, this.hidedb.GetItemChecked ( 0 ), this.hidedb.GetItemChecked ( 1 ), this.hidedb.GetItemChecked ( 2 ), this.hidedb.GetItemChecked ( 3 ), this.hidedb.GetItemChecked ( 4 ), this.password.Text, this.newuserfordb.Checked, this.mysqlusername.Text, this.mysqluserpw.Text, this.databasename.Text, this.grantalluser.Checked, this.useronlylocal.Checked );
+			this.error.Clear ();
+			if ( this.url.Text != "" ) {
+				if ( this.password.Text != "" ) {
+					if ( !this.newuserfordb.Checked || this.mysqlusername.Text != "" ) {
+						if ( !this.newuserfordb.Checked || this.mysqluserpw.Text != "" ) {
+							Installs.Database.InstallDatabase ( this.databasesystem.Text, this.webapp.Text, this.url.Text, this.hidedb.GetItemChecked ( 0 ), this.hidedb.GetItemChecked ( 1 ), this.hidedb.GetItemChecked ( 2 ), this.hidedb.GetItemChecked ( 3 ), this.hidedb.GetItemChecked ( 4 ), this.password.Text, this.newuserfordb.Checked, this.mysqlusername.Text, this.mysqluserpw.Text, this.databasename.Text, this.grantalluser.Checked, this.useronlylocal.Checked );
+						} else
+							this.error.SetError ( this.mysqluserpw, Languages.GetLang ( "content_missing" ) );
+					} else
+						this.error.SetError ( this.mysqlusername, Languages.GetLang ( "content_missing" ) );
+				} else
+					this.error.SetError ( this.password, Languages.GetLang ( "content_missing" ) );
+			} else 
+				this.error.SetError ( this.url, Languages.GetLang ( "content_missing" ) );
 		}
 
 		private void newuserfordb_CheckedChanged ( object sender, EventArgs e ) {

@@ -48,6 +48,8 @@ namespace LinuxMTAInstaller.Forms {
 			this.grantalluser = new System.Windows.Forms.CheckBox();
 			this.button2 = new System.Windows.Forms.Button();
 			this.useronlylocal = new System.Windows.Forms.CheckBox();
+			this.error = new System.Windows.Forms.ErrorProvider(this.components);
+			((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -260,6 +262,10 @@ namespace LinuxMTAInstaller.Forms {
 			this.useronlylocal.Text = "Back";
 			this.useronlylocal.UseVisualStyleBackColor = true;
 			// 
+			// error
+			// 
+			this.error.ContainerControl = this;
+			// 
 			// DatabaseWindow
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -289,6 +295,7 @@ namespace LinuxMTAInstaller.Forms {
 			this.Name = "DatabaseWindow";
 			this.Text = "Database";
 			this.Load += new System.EventHandler(this.DatabaseWindow_Load);
+			((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -317,5 +324,6 @@ namespace LinuxMTAInstaller.Forms {
 		private Button button2;
 		private CheckBox useronlylocal;
 		private Label label4;
+		private ErrorProvider error;
 	}
 }

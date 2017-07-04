@@ -138,5 +138,6 @@ Den Server startest du mit:
 
 stoppen mit:
 /etc/ts.sh stop" },
+		{ "content_missing", "Kein Inhalt vorhanden!" },
 	};
 }

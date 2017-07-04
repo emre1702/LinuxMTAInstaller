@@ -23,6 +23,7 @@
 		/// the contents of this method with the code editor.
 		/// </summary>
 		private void InitializeComponent ( ) {
+			this.components = new System.ComponentModel.Container();
 			this.username = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.userpw = new System.Windows.Forms.TextBox();
@@ -32,6 +33,8 @@
 			this.button1 = new System.Windows.Forms.Button();
 			this.label4 = new System.Windows.Forms.Label();
 			this.button2 = new System.Windows.Forms.Button();
+			this.error = new System.Windows.Forms.ErrorProvider(this.components);
+			((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// username
@@ -113,6 +116,10 @@
 			this.button2.UseVisualStyleBackColor = true;
 			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
+			// error
+			// 
+			this.error.ContainerControl = this;
+			// 
 			// TeamspeakWindow
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -129,6 +136,7 @@
 			this.Controls.Add(this.username);
 			this.Name = "TeamspeakWindow";
 			this.Text = "Teamspeak Installer";
+			((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -145,5 +153,6 @@
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.ErrorProvider error;
 	}
 }

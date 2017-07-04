@@ -36,9 +36,14 @@ namespace LinuxMTAInstaller.Forms {
 		}
 
 		private void button1_Click ( object sender, EventArgs e ) {
-			if ( instance.usernameBox.Text.Length > 0 ) {
-				Installs.MTA.InstallMTA ( this.usernameBox.Text, this.userPasswordBox.Text, this.autostart.Checked, this.servername.Text, this.email.Text, this.serverPort.Value.ToString(), this.maxplayers.Value.ToString (), this.httpPort.Value.ToString(), this.skinmodding.Checked, this.serverpassword.Text, this.bulletsync.Checked, this.fpslimit.Value.ToString() );
-			}
+			this.error.Clear ();
+			if ( this.usernameBox.Text != "" ) {
+				if ( this.servername.Text != "" ) {
+					Installs.MTA.InstallMTA ( this.usernameBox.Text, this.userPasswordBox.Text, this.autostart.Checked, this.servername.Text, this.email.Text, this.serverPort.Value.ToString (), this.maxplayers.Value.ToString (), this.httpPort.Value.ToString (), this.skinmodding.Checked, this.serverpassword.Text, this.bulletsync.Checked, this.fpslimit.Value.ToString () );
+				} else
+					this.error.SetError ( this.servername, Languages.GetLang ( "content_missing" ) );
+			} else
+				this.error.SetError ( this.usernameBox, Languages.GetLang ( "content_missing" ) );
 		}
 
 		public static void notification ( string text, string type ) {

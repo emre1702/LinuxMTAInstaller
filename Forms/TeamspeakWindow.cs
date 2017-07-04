@@ -25,7 +25,14 @@ namespace LinuxMTAInstaller.Forms {
 		}
 
 		private void button1_Click ( object sender, EventArgs e ) {
-			Installs.Teamspeak.InstallTeamspeak ( this.username.Text, this.userpw.Text, this.serveradminpw.Text );
+			this.error.Clear ();
+			if ( this.username.Text != "" ) {
+				if ( this.userpw.Text != "" ) {  
+					Installs.Teamspeak.InstallTeamspeak ( this.username.Text, this.userpw.Text, this.serveradminpw.Text );
+				} else
+					this.error.SetError ( this.userpw, Languages.GetLang ( "content_missing" ) );
+			} else 
+				this.error.SetError ( this.username, Languages.GetLang ( "content_missing" ) );
 		}
 
 		private void button2_Click ( object sender, EventArgs e ) {

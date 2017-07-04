@@ -51,10 +51,12 @@
 			this.email = new System.Windows.Forms.TextBox();
 			this.label11 = new System.Windows.Forms.Label();
 			this.button2 = new System.Windows.Forms.Button();
+			this.error = new System.Windows.Forms.ErrorProvider(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.serverPort)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.httpPort)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.maxplayers)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.fpslimit)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -339,6 +341,10 @@
 			this.button2.UseVisualStyleBackColor = true;
 			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
+			// error
+			// 
+			this.error.ContainerControl = this;
+			// 
 			// MTAWindow
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -376,6 +382,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.httpPort)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.maxplayers)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.fpslimit)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -410,5 +417,6 @@
 		private System.Windows.Forms.TextBox email;
 		private System.Windows.Forms.Label label11;
 		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.ErrorProvider error;
 	}
 }
