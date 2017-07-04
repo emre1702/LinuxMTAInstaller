@@ -89,7 +89,11 @@ namespace LinuxMTAInstaller.Connection {
 			Console.WriteLine ( command );
 			CommandExecutionResult cmd = session.ExecuteCommand ( command );
 			// Check for errors //
-			cmd.Check ();
+			if ( !cmd.IsSuccess ) {
+				Console.WriteLine ( cmd.ErrorOutput+"\n" );
+				cmd.Check ();
+			}
+			
 			// Let the user know what we did //
 			Console.WriteLine ( cmd.Output );
 		}
